@@ -1,0 +1,215 @@
+/* ==========================================================================
+
+    Project: Project Template Test
+    Author: XHTMLized.com
+    Last updated: @@timestamp
+@@toc
+
+   ========================================================================== */
+
+@import "../bower_components/normalize-scss/normalize";
+
+/* ==========================================================================
+   Custom Styling
+   ========================================================================== */
+@import "variables";
+@import "mixins";
+@import "common";
+@import "home";
+body
+{
+	background-color:$bgc;
+	color:$global-col;
+	@include box-sizing();
+}
+.sidebar
+{
+	@extend .fr;	
+}
+.sec
+{
+	@include css3pie;
+	@include border-radius(10px);
+	background-color:#ffffff;
+	width:$wid;
+	@extend .border;
+		h2
+		{
+			text-transform: capitalize;
+			color: $big-title-col;
+			font-size: $big-title-font;
+			width: $wid;
+			padding-top: $wp-big-margin - 3px;
+			padding-bottom:$wp-big-margin - 4px;
+			text-transform: uppercase;
+			border-bottom: {
+				style: dotted;
+				width:1px;
+				color: #d9cbb6;
+				}
+			text-indent: $wp-big-margin;
+		}
+		.sm
+		{
+			display: inline-block;
+			height: $link-height;
+			margin:{
+					bottom: $wp-big-margin;
+					top: $wp-big-margin - 11px;
+				}
+		}
+		#fb
+		{
+			background-image:url(../../dist/img/fb.png);
+			width: $link-width;
+			margin:{
+					left: $wp-big-margin;
+					right: $wp-big-margin - 6px;
+				} 
+		}
+		#tw
+		{
+			width: $link2-width;
+			background-image:url(../../dist/img/tw.png);
+			margin:{
+					right: $wp-big-margin - 5px;
+				}
+		}
+		#gp
+		{
+			width: $link3-width;
+			background-image:url(../../dist/img/g+.png);
+		}
+		ul
+		{
+			li
+			{
+				display: list-item;
+				list-style-image: url(../../dist/img/list-item.png);
+				margin: $wp-small-margin*2 0 $wp-small-margin*2 0;
+				a
+				{
+					color: $global-col;
+					font-size: $wp-big-margin - 8px;
+					@extend .no-te-de;
+				}
+				a:hover
+				{
+					text-decoration: underline;	
+				}
+			}
+
+		}
+		address
+		{
+			font-size: $big-title-font - 2px;
+			padding-left: $wp-big-margin;
+			font-style: normal;
+			padding-bottom:$wp-big-margin - 5px;
+			line-height: $wp-big-margin + 2px;
+		}
+
+}
+.content
+{
+	width:$news-width;
+	background-color:$basic-bg;
+	@include border-radius(10px);
+	@extend .border;
+	@extend .fl;
+	@include css3pie;
+	.top
+	{
+		@include linearGradient1(#FB2E6D , #E61052);
+		@include css3pie;
+		@include border-radius2(10px);
+		h2
+		{
+			text-transform: uppercase;
+			color: $basic-bg;
+			@extend .in-b;
+			@extend .bold;
+			font-size: $big-title-font - 2px;
+			@include text-shadow(-1px , 0px , 0px , #000);
+			width: $news-inner-width;
+			line-height: $wp-big-margin + 35px;
+			padding:$zero;
+			margin: $zero;
+			text-indent: $wp-big-margin;
+			letter-spacing: $zero +1px;
+		}
+		.for-b
+		{
+			@extend .dotted-b;
+		}
+	}
+}
+.news-content
+{
+	div
+	{
+		padding-bottom: $big-title-font - 2px;
+		@extend .fl;
+		width: $news-inner-width;
+		ul
+		{
+			@extend .no-margin_no-padding;
+			li
+			{
+				padding-left: $wp-big-margin - 2px;
+				@extend .no-li;
+				h3
+				{
+					color: #000;
+					font-size:$big-title-font - 1px;
+						padding-top : $wp-big-margin - 2px;
+
+
+				}
+				img
+				{
+					@extend .in-b;
+					@extend .v-top;
+					padding: $wp-small-margin - 1px;
+					border: {
+						style: solid;
+						width:1px;
+						color: #d9cbb6;
+					}
+				}
+				img:hover
+				{
+					cursor: pointer;
+				}
+				.openimg
+				{
+					@extend .in-b;
+					@extend .v-top;	
+				}
+				p
+				{
+					@extend .in-b;
+					width: $p-width;
+					margin: $zero;
+					padding-left:$big-title-font + 1px;
+					font-size: $big-title-font - 1px;
+					line-height: $wp-big-margin;
+					a
+					{
+						color: $big-title-col;
+						@extend .no-te-de;
+						font-size: $big-title-font - 2px;
+						padding-top: $wp-small-margin + $wp-small-margin;
+						@extend .blo;
+						background:url(../../dist/img/List-item-pink.png) no-repeat 30px 16px;
+					}
+				}
+			}
+		}
+	}
+			.one
+		{
+			@extend .dotted-b;
+		}
+}
+
